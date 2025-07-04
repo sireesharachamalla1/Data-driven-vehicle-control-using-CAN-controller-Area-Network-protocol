@@ -36,3 +36,13 @@ This project implements a **robust and fault-tolerant vehicle control system** o
   - Responds back to the Main Node with status or confirmation.
 - Movement is done in steps (e.g., one LED ON per open/close command).
 
+## Design: Fault-Tolerant Architecture
+
+- Nodes act **only on valid messages intended for them**.
+- **CAN messages are filtered** per node functionality.
+- If any node is disconnected:
+  - The rest of the system continues functioning.
+  - The Main Node continues to operate and display temperature data.
+- All inter-node logic is interrupt- and request-based — **no polling required**.
+
+---
