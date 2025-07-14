@@ -1,4 +1,4 @@
-	  #ifndef _ADC_DEFINES_H
+ #ifndef _ADC_DEFINES_H
 
 #define _ADC_DEFINES_H
 
@@ -16,7 +16,7 @@
 #define CH3 (1<<3)           
 
 
-#define FOSC		12000000               
+#define FOSC	12000000               
 
 #define CCLK    (5*FOSC)           
 
