@@ -46,7 +46,7 @@ int main()
 
     Init_CAN1();
     InitLCD();
-	  Init_Buzzer(); 
+    Init_Buzzer(); 
     Init_Enable();
     Init_LED();
     Setup_CAN_Frame();
@@ -109,7 +109,7 @@ void Handle_Reverse_Mode(void)
             CmdLCD(0x80 + 7);
             StrLCD((s8*)"D=");
             U32LCD(distance);
-						StrLCD((s8*)"cm"); 
+	    StrLCD((s8*)"cm"); 
             Control_LED(distance);
         }
      }
@@ -125,7 +125,7 @@ void Show_Forward_Mode(void)
 {
     CmdLCD(0x80);
     StrLCD((s8*)"F:MODE      ");
-  }
+}
 
 // Window status display
 void Display_Window_Status(int level) 
@@ -168,14 +168,14 @@ void Init_LED(void)
 {
     IODIR0 |= 1 << LED_PIN;
     IOSET0 = 1 << LED_PIN;
-  } 
+} 
 
 	//  Buzzer Setup
 void Init_Buzzer(void)
 {
     IODIR0 |= 1 << BUZZER_PIN;
     IOCLR0 = 1 << BUZZER_PIN;  // Initially OFF
-  }
+}
 
 
 	
@@ -185,4 +185,4 @@ void Setup_CAN_Frame(void)
     Tx_Frame.ID = 2;
     Tx_Frame.BFV.RTR = 0;
     Tx_Frame.BFV.DLC = 4;
-  }
+}
