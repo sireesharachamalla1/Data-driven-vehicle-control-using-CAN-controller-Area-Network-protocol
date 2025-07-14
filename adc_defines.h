@@ -2,9 +2,6 @@
 
 #define _ADC_DEFINES_H
 
-
-
-
 //defines for ADCR
 
 #define CH0 (1<<0)
