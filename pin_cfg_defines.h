@@ -1,4 +1,4 @@
-							  //pin_cfg_defines.h
+ //pin_cfg_defines.h
 
 #ifndef _PIN_CFG_DEFINES_H
 
