@@ -18,7 +18,7 @@
                   ((TSEG2-1)<<20)| \
                   ((TSEG1-1)<<16)| \
                   ((SJW-1)<<14)|   \
-									(BRP-1))
+		  (BRP-1))
 
 //CxCMR sfr bit defines
 #define TR_BIT   0
