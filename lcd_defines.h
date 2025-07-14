@@ -1,4 +1,4 @@
-              	   //lcd_defines.h
+//lcd_defines.h
 
 
 #ifndef _LCD_DEFINES_H
@@ -8,7 +8,7 @@
 
 //HD44780 Commands
 
-#define CLEAR_LCD 	     	 0x01           
+#define CLEAR_LCD 	     	   0x01           
 
 #define RET_CUR_HOME         0x02
 
