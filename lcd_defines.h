@@ -8,7 +8,7 @@
 
 //HD44780 Commands
 
-#define CLEAR_LCD 	     	  0x01           
+#define CLEAR_LCD 	     	0x01           
 
 #define RET_CUR_HOME         0x02
 
