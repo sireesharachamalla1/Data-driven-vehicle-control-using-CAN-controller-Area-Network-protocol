@@ -1,4 +1,4 @@
-						  //pin_cfg.h
+ //pin_cfg.h
 
 #ifndef _PIN_CFG_H
 
