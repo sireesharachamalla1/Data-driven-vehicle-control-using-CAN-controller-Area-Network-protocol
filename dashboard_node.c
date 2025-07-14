@@ -24,7 +24,7 @@ float arr[8] = {12.5, 25, 37.5, 50, 62.5, 75, 87.5, 100};
 // Display Messages
 char str1[] = "HELLO    ";
 char str2[] = "CAN MAJOR PROJECT  ";
-char str3[] = "ID= V24HE5M16   ";
+char str3[] = "ID= V24HE5R2   ";
 
 // Function Prototypes
 void Show_Startup_Sequence(void);
