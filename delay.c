@@ -19,7 +19,7 @@ void delay_ms(u32 dlyMS)
 
 	//N * ~1ms @CCLK=60MHz
 
-          	for(dlyMS*=12000;dlyMS>0;dlyMS--);
+        for(dlyMS*=12000;dlyMS>0;dlyMS--);
 
 }
 
