@@ -3,7 +3,7 @@
 #include "delay.h"
 #include "can.h"
 
-#define	EINT0_PIN    16
+#define	EINT0_PIN          16
 #define EINT1_PIN	   14
 #define	EINT2_PIN	   15
 
@@ -69,5 +69,5 @@ void Init_Enable(void)
     EXTMODE = (1<<0) | (1<<1) | (1<<2);  // All as edge triggered
 
     EXTPOLAR = 0x0;  // All are  AL triggered
-	}
+}
 
