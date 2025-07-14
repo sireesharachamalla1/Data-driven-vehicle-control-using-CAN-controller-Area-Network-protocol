@@ -18,7 +18,7 @@ f32 volt_dist(f32 eAR)
 }
 
 int main()
-	{
+{
     Init_CAN1();    // Initialize CAN1 peripheral
     Init_ADC();     // Initialize ADC peripheral
 
@@ -27,18 +27,18 @@ int main()
     txF.BFV.DLC = 4;    // 4 bytes of data
 
     while (1)
-			{
+    {
         aR0 = Read_ADC(CH0);          // Read analog voltage from channel 0
         distance = volt_dist(aR0);    // Convert voltage to distance
 
         if ((distance >= 6) && (distance <= 85))
-					{
+	{
             txF.Data1 = distance;     // Send distance in Data1
             CAN1_Tx(txF);             // Transmit via CAN
-					}
+	}
 
         delay_ms(100);                // Transmit every 100 ms
-      }
+   }
 
     return 0;
   }
