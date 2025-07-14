@@ -12,15 +12,12 @@
 /*
 
 struct CAN_Frame
-
 {	
-
 	u32 ID;
 
 	struct BitField
 
 	{
-
 		u32 RTR : 1;
 
 		u32 DLC : 4;
@@ -35,17 +32,12 @@ struct CAN_Frame
 
 */
 
-
 typedef struct CAN_Frame
-
 {	
-
 	u32 ID;
 
 	struct BitField
-
 	{
-
 		u32 RTR : 1;
 
 		u32 DLC : 4;
@@ -58,11 +50,7 @@ typedef struct CAN_Frame
 
 }CANF;
 
-
-
-
 void Init_CAN1(void)
-
 {
 
     //cfg p0.25 as CAN1_RX pin(RD1)
@@ -75,11 +63,11 @@ void Init_CAN1(void)
 
     //all received messages are accepted
 
-	  CLRBIT(AFMR,AccOFF_BIT);
+     CLRBIT(AFMR,AccOFF_BIT);
 
     SETBIT(AFMR,AccBP_BIT);             
 
-	  //AFMR=((AFMR&~(3<<AccOFF_BIT))|(2<<AccOFF_BIT));
+    //AFMR=((AFMR&~(3<<AccOFF_BIT))|(2<<AccOFF_BIT));
 
     //Set baud Rate for CAN
 
@@ -93,14 +81,13 @@ void Init_CAN1(void)
 
 
 void CAN1_Tx(CANF txFrame)
-
 {		
 
    // Checking that the TX buffer is empty
 
    while(READBIT(C1GSR,TBS1_BIT)==0);
 
-	//while(((C1GSR>>TBS1_BIT)&1)==0);
+   //while(((C1GSR>>TBS1_BIT)&1)==0);
 
    // Cfg Tx ID
 
@@ -108,17 +95,14 @@ void CAN1_Tx(CANF txFrame)
 
    // Cfg RTR & DLC	
 
-   C1TFI1=(txFrame.BFV.RTR<<RTR_BIT)|
-
-          (txFrame.BFV.DLC<<DLC_BITS);
+   C1TFI1=(txFrame.BFV.RTR<<RTR_BIT)|(txFrame.BFV.DLC<<DLC_BITS);
 
     //Check whether D/R Frame to Transmit
 
    if(txFrame.BFV.RTR!=1)
-
    {	
 
-     //if D Frame,wr to data transmit buffers
+         //if D Frame,wr to data transmit buffers
 
 	   C1TDA1= txFrame.Data1; /*bytes 1-4 */
 
@@ -136,9 +120,7 @@ void CAN1_Tx(CANF txFrame)
 
 }
 
-
 void CAN1_Rx(CANF *rxFrame)
-
 {
 
   //wait for CAN frame recv status
@@ -160,7 +142,6 @@ void CAN1_Rx(CANF *rxFrame)
   //check if recvd frame is data frame,
 
   if(rxFrame->BFV.RTR==0)
-
   {	
 
    //extract data bytes 1-4
