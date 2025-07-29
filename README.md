@@ -36,7 +36,7 @@ This project implements a **robust and fault-tolerant vehicle control system** o
   - Responds back to the Main Node with status or confirmation.
 - Movement is done in steps (e.g., one LED ON per open/close command).
 
-## Design: Fault-Tolerant Architecture
+### Design: Fault-Tolerant Architecture
 
 - Nodes act **only on valid messages intended for them**.
 - **CAN messages are filtered** per node functionality.
@@ -44,5 +44,22 @@ This project implements a **robust and fault-tolerant vehicle control system** o
   - The rest of the system continues functioning.
   - The Main Node continues to operate and display temperature data.
 - All inter-node logic is interrupt- and request-based — **no polling required**.
+
+### Hardware Requirements
+
+- LPC2129
+- CAN Transceiver(MCP2551)
+- LEDS
+- SWITCHES
+- LCD
+- GP2D12
+- DS18B20 Temperature Sensor
+- USB To UART Converter
+
+### Software Requirements
+
+-EMBEDDED C-PROGRAMMING
+- KEIL-C COMPILER
+- FLASH MAGIC
 
 ---
