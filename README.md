@@ -71,5 +71,4 @@ This project implements a **robust and fault-tolerant vehicle control system** o
 - ALERT LED -> p0.22
 - DS18B20 TEMPERATURE SENSOR -> p1.16
 - GP2D12 DISTANCE SENSOR -> p0.27(ADC CH0)  
-- 
 ---
