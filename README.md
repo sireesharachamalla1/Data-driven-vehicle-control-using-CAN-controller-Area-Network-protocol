@@ -66,8 +66,8 @@ This project implements a **robust and fault-tolerant vehicle control system** o
 
 - LCD -> p0.8 - p0.15, RS -> p0.16, EN -> p0.18
 - LEDs -> p0.0 - p0.7
-- REVERSE NODE CONTROL SWITCH -> p0.1
-- WINDOWS OPEN & CLOSE -> p0.3, p0.7
+- REVERSE NODE CONTROL SWITCH(EXT-INTERRUPT) -> p0.1
+- WINDOWS OPEN & CLOSE SWITCHES(EXT_INTERRUPTS) -> p0.3, p0.7
 - ALERT LED -> p0.22
 - DS18B20 TEMPERATURE SENSOR -> p1.16
 - GP2D12 DISTANCE SENSOR -> p0.27(ADC CH0)  
